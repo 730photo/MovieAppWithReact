@@ -11,6 +11,9 @@ flex-direction: row;
 background-color: black;
 color: white;
 padding: 10px;
+font-size: 25px;
+font-weight: bold;
+box-shadow: 0 3px 6px 0 #555555;
 `;
 
 function App() {
