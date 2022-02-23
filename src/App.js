@@ -5,21 +5,72 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+//Style for the header
 const Header = styled.div`
-display: flex;
-flex-direction: row;
-background-color: black;
-color: white;
-padding: 10px;
-font-size: 25px;
-font-weight: bold;
-box-shadow: 0 3px 6px 0 #555555;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  color: white;
+  align-items: center;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  box-shadow: 0 3px 6px 0 #555555;
+`;
+
+//Movie App With React
+const AppName = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+// Movie Image Icon
+const MovieImage = styled.img`
+  width: 48px;
+  height: 48px;
+  margin: 15px;
+`
+// Search Box
+const SearchBox = styled.div`
+  display: flex;
+  flex-direction:row;
+  padding: 10px 10px;
+  background-color: white;
+  border-radius: 6px;
+  margin-left: 20px;
+  width: 50%;
+  background-color: white;
+  align-items: center;
+`
+
+// Search Box Image Icon
+const SearchIcon = styled.img`
+  width: 32px;
+  height: 32px;
+`;
+
+const SearchInput = styled.input`
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  margin-left: 15px;
 `;
 
 function App() {
   return <Container>
-    <Header>Movie App with React</Header>
-    Yessir!</Container>;
+    <Header><AppName>
+      <MovieImage src="/movie-icon.svg" />
+      Movie App w/ React</AppName>
+      <SearchBox>
+        <SearchIcon src="/search-icon.svg"/>
+        <SearchInput />
+      </SearchBox>
+      </Header>
+    Yessir!
+    </Container>;
 }
 
 export default App;
