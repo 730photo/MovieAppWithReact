@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import MovieComponent from "./components/MovieComponent";
 
 const Container = styled.div`
   display: flex;
@@ -50,6 +51,7 @@ const SearchIcon = styled.img`
   height: 32px;
 `;
 
+// Search input box
 const SearchInput = styled.input`
   color: black;
   font-size: 16px;
@@ -59,6 +61,15 @@ const SearchInput = styled.input`
   margin-left: 15px;
 `;
 
+// Movie list container
+const MovieListContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: space-evenly;
+`;
+
 function App() {
   return <Container>
     <Header><AppName>
@@ -66,10 +77,15 @@ function App() {
       Movie App w/ React</AppName>
       <SearchBox>
         <SearchIcon src="/search-icon.svg"/>
-        <SearchInput />
+        <SearchInput placeholder="Search Movie" />
       </SearchBox>
       </Header>
-    Yessir!
+      <MovieListContainer>
+        <MovieComponent />
+        <MovieComponent />
+        <MovieComponent />
+        <MovieComponent />
+      </MovieListContainer>
     </Container>;
 }
 
